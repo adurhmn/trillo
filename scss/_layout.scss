@@ -1,0 +1,76 @@
+@use './base' as *;
+
+body {
+    background-image: linear-gradient(to bottom right, var(--color-primary-light), var(--color-primary));
+    padding: 8rem 0;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 120rem;
+    box-shadow: var(--shadow-dark);
+}
+
+.header {
+    height: 7rem;
+    background-color: #fff;
+    border-bottom: var(--line);
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content {
+    display: flex;
+}
+
+.sidebar {
+    flex: 0 0 18%;
+    background-color: var(--color-grey-dark-1);
+    padding-top: 3.5rem;
+    position: relative;
+}
+
+.hotel-info {
+    flex: 1;
+    background-color: var(--color-grey-light-1);
+}
+
+////////////////////////////////////
+/// MEDIA QUERY
+////////////////////////////////////
+
+@media only screen and (max-width: $breakpoint-large) {
+    body {
+        padding: 0;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: $breakpoint-mid) {
+    .content {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        padding: 0;
+    }
+
+    .copyright {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: $breakpoint-small) {
+    //moving the search field to bottom of header
+    .header {
+        flex-wrap: wrap;
+        height: auto;
+        row-gap: 1rem;
+        padding: 1rem 0;
+    }
+}

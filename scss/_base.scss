@@ -1,0 +1,73 @@
+//////////////////////////////////// 
+/// RESET
+////////////////////////////////////
+
+html {
+    font-size: 62.5%;    
+}
+
+*,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+body {
+    color: var(--color-grey-dark-2);
+}
+
+//////////////////////////////////// 
+/// VARIABLES
+////////////////////////////////////
+
+html {
+    //COLORS
+    --color-primary: #eb2f64;
+    --color-primary-light: #FF3366;
+    --color-primary-dark: #BA265D;
+
+    --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #f0eeee;
+    --color-grey-light-4: #ccc;
+
+    --color-grey-dark-1: #333;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #999;
+
+    //BORDER
+    --line: 1px solid var(--color-grey-light-3);
+
+    //SHADOW   
+    --shadow-dark: 0 2rem 4rem rgba(0, 0, 0, .3);
+    --shadow-light: 0 1.5rem 3rem rgba(0, 0, 0, .1);
+}
+
+
+//BREAKPOINTS
+$breakpoint-smallest: 470px;
+$breakpoint-small: 650px;
+$breakpoint-mid: 950px;
+$breakpoint-large: 1200px;
+
+//////////////////////////////////// 
+/// MEDIA QUERY
+////////////////////////////////////
+
+@media only screen and (max-width: $breakpoint-large) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media only screen and (max-width: $breakpoint-mid) {
+    html {
+        font-size: 52%;
+    }
+}
